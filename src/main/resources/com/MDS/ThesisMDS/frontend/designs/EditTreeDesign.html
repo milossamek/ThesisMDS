@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="design-properties"
+          content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+    <meta name="vaadin-version" content="8.0.5">
+</head>
+<body>
+<vaadin-vertical-layout>
+    <vaadin-panel>
+        <vaadin-vertical-layout>
+            <vaadin-label caption-as-html caption="<H2><b>Tree Operations</b><H2>" plain-text>
+                Select one of tree operations and press accept to start action
+            </vaadin-label>
+            <vaadin-horizontal-layout>
+                <vaadin-button icon="fonticon://Vaadin-Icons/e929" style-name="primary colored" plain-text _id="btnAdd">
+                    Add
+                </vaadin-button>
+                <vaadin-button icon="fonticon://Vaadin-Icons/e771" style-name="primary colored" plain-text
+                               _id="btnEdit">
+                    Edit
+                </vaadin-button>
+                <vaadin-button icon="fonticon://Vaadin-Icons/e80b" style-name="primary colored" plain-text
+                               _id="btnDelete">
+                    Delete
+                </vaadin-button>
+                <vaadin-button icon="fonticon://Vaadin-Icons/e805" style-name="primary colored" plain-text
+                               _id="btnFind">
+                    Find
+                </vaadin-button>
+            </vaadin-horizontal-layout>
+            <vaadin-grid width-full data-item-type="com.MDS.ThesisMDS.backend.database.model.TreeNodeDB"
+                         _id="gridNodes">
+                <table>
+                    <colgroup>
+                        <col column-id="id" sortable>
+                        <col column-id="loc" sortable>
+                        <col column-id="data" sortable>
+                        <col column-id="tree" sortable>
+                    </colgroup>
+                    <thead>
+                    <tr default>
+                        <th plain-text column-ids="id">Id</th>
+                        <th plain-text column-ids="loc">Loc</th>
+                        <th plain-text column-ids="data">Data</th>
+                        <th plain-text column-ids="tree">Tree</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </vaadin-grid>
+            <vaadin-horizontal-layout :middle :right>
+                <vaadin-button visible="false" icon="fonticon://Vaadin-Icons/e759" style-name="huge friendly" plain-text
+                               _id="btnAccept" :middle :right>
+                    Accept
+                </vaadin-button>
+                <vaadin-button icon="fonticon://Vaadin-Icons/e60c" style-name="huge danger" plain-text _id="btnCancel"
+                               :middle :right>
+                    Cancel
+                </vaadin-button>
+            </vaadin-horizontal-layout>
+        </vaadin-vertical-layout>
+    </vaadin-panel>
+</vaadin-vertical-layout>
+</body>
+</html>

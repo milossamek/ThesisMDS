@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="design-properties"
+          content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+    <meta name="vaadin-version" content="8.0.5">
+</head>
+<body>
+<vaadin-vertical-layout>
+    <vaadin-panel width="100.14%">
+        <vaadin-vertical-layout margin-top="false" margin-bottom="false">
+            <vaadin-label style-name="bold h2" plain-text>
+                Operation detail:
+            </vaadin-label>
+            <vaadin-horizontal-layout responsive width-full margin-bottom>
+                <vaadin-label caption="ID" style-name="colored bold large" responsive plain-text _id="lblId">
+                    Label
+                </vaadin-label>
+                <vaadin-label caption="Operation" style-name="colored bold large" responsive plain-text
+                              _id="lblOperation" :middle>
+                    Label
+                </vaadin-label>
+                <vaadin-label caption="Node" style-name="colored bold large" responsive plain-text _id="lblNode"
+                              :middle>
+                    Label
+                </vaadin-label>
+                <vaadin-label caption="Detail" style-name="colored bold large" plain-text _id="lblDetail" :middle>
+                    Label
+                </vaadin-label>
+            </vaadin-horizontal-layout>
+        </vaadin-vertical-layout>
+    </vaadin-panel>
+    <vaadin-panel>
+        <vaadin7-vertical-layout margin-left>
+            <vaadin-label style-name="bold h2" plain-text>
+                Node Detail
+            </vaadin-label>
+            <vaadin7-horizontal-layout spacing responsive width-full margin-bottom :middle :expand>
+                <vaadin-label caption="ID" style-name="colored bold large" responsive plain-text _id="lblNodeId"
+                              :middle>
+                    Label
+                </vaadin-label>
+                <vaadin-label caption="Location" style-name="colored bold large" responsive plain-text _id="lblLocation"
+                              :middle>
+                    Location
+                </vaadin-label>
+                <vaadin-label caption="Data" style-name="colored bold large" responsive plain-text _id="lblData"
+                              :middle>
+                    Data
+                </vaadin-label>
+                <vaadin-label caption="Tree" style-name="colored bold large" responsive plain-text _id="lblTreeId"
+                              :middle>
+                    Label
+                </vaadin-label>
+            </vaadin7-horizontal-layout>
+        </vaadin7-vertical-layout>
+    </vaadin-panel>
+    <vaadin-panel>
+        <vaadin7-vertical-layout margin-left margin-right>
+            <vaadin-label style-name="h2 bold" plain-text>
+                Tree detail:
+            </vaadin-label>
+            <vaadin7-horizontal-layout width-full>
+                <vaadin7-horizontal-layout width-full margin-right :expand>
+                    <vaadin-label caption="ID" style-name="colored bold large" responsive plain-text _id="lblTreeId2"
+                                  :middle>
+                        Label
+                    </vaadin-label>
+                    <vaadin-label caption="Tree type" style-name="colored bold large" responsive plain-text
+                                  _id="lblTreeType" :middle>
+                        Location
+                    </vaadin-label>
+                    <vaadin-label caption="Node count" style-name="colored bold large" responsive plain-text
+                                  _id="lblNodeCount" :middle>
+                        Data
+                    </vaadin-label>
+                    <vaadin-label caption="Max level" style-name="colored bold large" responsive plain-text
+                                  _id="lblMaxLevel" :middle>
+                        Label
+                    </vaadin-label>
+                </vaadin7-horizontal-layout>
+            </vaadin7-horizontal-layout>
+            <vaadin-grid caption-as-html caption="<H3><b>Nodes:<b></H3>" size-full
+                         data-item-type="com.MDS.ThesisMDS.backend.database.model.TreeNodeDB" _id="grid">
+                <table>
+                    <colgroup>
+                        <col column-id="id" sortable>
+                        <col column-id="loc" sortable>
+                        <col column-id="data" sortable>
+                        <col column-id="tree" sortable>
+                    </colgroup>
+                    <thead>
+                    <tr default>
+                        <th plain-text column-ids="id">Id</th>
+                        <th plain-text column-ids="loc">Loc</th>
+                        <th plain-text column-ids="data">Data</th>
+                        <th plain-text column-ids="tree">Tree</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </vaadin-grid>
+        </vaadin7-vertical-layout>
+    </vaadin-panel>
+    <vaadin-button style-name="friendly huge" plain-text _id="btnClose" :middle :right>
+        OK
+    </vaadin-button>
+</vaadin-vertical-layout>
+</body>
+</html>

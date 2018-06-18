@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="design-properties"
+          content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+    <meta name="vaadin-version" content="8.0.5">
+</head>
+<body>
+<vaadin-vertical-layout size-auto>
+    <vaadin-form-layout size-auto margin>
+        <vaadin-text-field caption="Location X:" _id="edtX"></vaadin-text-field>
+        <vaadin-text-field caption="Location Y:" _id="edtY"></vaadin-text-field>
+        <vaadin-text-field caption="Data:" _id="edtData"></vaadin-text-field>
+    </vaadin-form-layout>
+    <vaadin7-horizontal-layout width-full>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e801" style-name="friendly" plain-text _id="btnOK" :middle>
+            Add node
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e7a4" style-name="danger" plain-text _id="btnCancel" :middle
+                       :right>
+            Cancel
+        </vaadin-button>
+    </vaadin7-horizontal-layout>
+</vaadin-vertical-layout>
+</body>
+</html>

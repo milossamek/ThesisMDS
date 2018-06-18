@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout>
+   <vaadin-vertical-layout margin="false" :middle :center>
+    <vaadin-vertical-layout margin="false">
+     <vaadin-label style-name="h1 colored no-margin" plain-text _id="lblTitle">
+       Welcome 
+     </vaadin-label>
+    </vaadin-vertical-layout>
+    <vaadin-label style-name="no-margin tiny" _id="lblInfo">
+      Select one of trees or get last operation from database 
+     <br>For clean Tree click the buttons below 
+     <br>For operation select item in the grid 
+    </vaadin-label>
+    <vaadin-css-layout caption-as-html caption="<h2> <b>Multidimensional data-structures" style-name="huge primary">
+     <vaadin-button style-name="huge primary" plain-text _id="btnPST">
+       Priority Search Tree 
+     </vaadin-button>
+     <vaadin-button style-name="huge danger" plain-text _id="btnRange">
+       Range Tree 
+     </vaadin-button>
+     <vaadin-button style-name="huge friendly" plain-text _id="btnQuad">
+       Quad Tree - Trie 
+     </vaadin-button>
+     <vaadin-button style-name="huge" plain-text _id="btnPointQuad">
+       Quad Tree - Point 
+     </vaadin-button>
+    </vaadin-css-layout>
+    <vaadin-css-layout caption-as-html caption="<h2><b> Linear orderings" style-name="huge primary">
+     <vaadin-button style-name="huge primary" plain-text _id="btnHilbert">
+       Hilbert ordering 
+     </vaadin-button>
+     <vaadin-button style-name="huge danger" plain-text _id="btnZORder">
+       Z-Curve ordering 
+     </vaadin-button>
+     <vaadin-button style-name="huge friendly" plain-text _id="btnPeano">
+       Peano ordering 
+     </vaadin-button>
+    </vaadin-css-layout>
+    <vaadin-vertical-layout margin="false">
+     <vaadin-label style-name="h2 bold no-margin" plain-text _id="lblOperations">
+       Last operations 
+     </vaadin-label>
+     <vaadin-grid responsive id="test" width-full data-item-type="com.MDS.ThesisMDS.backend.database.model.OperationsDB" _id="gridOperations">
+      <table>
+       <colgroup>
+        <col column-id="id" sortable>
+        <col column-id="type" sortable>
+        <col column-id="node" sortable>
+        <col column-id="details" sortable>
+       </colgroup>
+       <thead>
+        <tr default>
+         <th plain-text column-ids="id">Id</th>
+         <th plain-text column-ids="type">Type</th>
+         <th plain-text column-ids="node">Node</th>
+         <th plain-text column-ids="details">Details</th>
+        </tr>
+       </thead>
+       <tbody></tbody>
+      </table>
+     </vaadin-grid>
+    </vaadin-vertical-layout>
+   </vaadin-vertical-layout>
+   <vaadin-button icon="fonticon://Vaadin-Icons/e6fa" style-name="friendly large primary colored" plain-text _id="btnAction" :middle :right>
+     Execute operation 
+   </vaadin-button>
+  </vaadin-vertical-layout>
+ </body>
+</html>
