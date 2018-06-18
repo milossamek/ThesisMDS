@@ -1,7 +1,7 @@
 # ThesisMDS - Multidimensional point data structure algorithms - visualization of evolution. 
 Technology used in thesis: Spring, Vaadin, Hibernate, ProcessingJS
 
-# Abstarct
+# Abstract
 The primary topic of this thesis is visualization of data structures used to store multidimensional
 point data and their operations. Specifically, this thesis covers visualisations of the priority
 search tree, range tree and two quad tree specifications. The secondary goal was to create visualisations
